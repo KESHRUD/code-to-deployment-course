@@ -11,6 +11,7 @@ public class Application {
         Endpoint.publish(url, new MonServiceWeb());
         System.out.println("Service web déployé à l'adresse : " + url);
         System.out.println("Accédez au WSDL via : " + url + "?wsdl");
+        System.out.println("Accédez au XSD via : " + url + "?xsd");
     }
 }
     /**
