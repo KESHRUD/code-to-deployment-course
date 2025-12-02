@@ -1,0 +1,16 @@
+services:
+  product-service:
+    build: ./Product
+    volumes:
+      - ./Product:/usr/src/app
+    ports:
+      - "5001:80"
+
+  website:
+    image: php:apache
+    volumes:
+      - ./Website:/var/www/html
+    ports:
+      - "5002:80"
+    depends_on:
+      - product-service
